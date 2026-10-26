@@ -1,0 +1,4 @@
+CREATE USER IF NOT EXISTS 'monitor'@'%' IDENTIFIED BY 'monitorpass';
+GRANT SELECT ON sys.* TO 'monitor'@'%';
+GRANT REPLICATION CLIENT ON *.* TO 'monitor'@'%';
+FLUSH PRIVILEGES;
